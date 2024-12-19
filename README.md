@@ -1,46 +1,74 @@
-# House Selling Price Prediction Using Logistic Regression
+# Prediction of House Selling
 
 ## Project Overview
+This project aims to predict whether a house will be sold based on various features such as price, location, amenities, and community factors. Using a machine learning pipeline, the project involves data preprocessing, exploratory data analysis (EDA), outlier detection, and model building to achieve reliable predictions.
 
-This project aims to build a predictive model that forecasts house selling prices based on various factors such as age, number of hot rooms, and rainfall using multivariate linear regression. The dataset used for this analysis includes different features affecting house prices.
+---
 
-## Problem Statement
+## Table of Contents
+1. [Introduction](#introduction)
+2. [Dataset Description](#dataset-description)
+3. [Key Steps](#key-steps)
+4. [Models Used](#models-used)
+5. [Results and Insights](#results-and-insights)
 
-The goal is to analyze the relationship between various factors affecting house prices and to develop a model that accurately predicts house selling prices based on these factors.
 
-## Data
+---
 
-The dataset used is the house price dataset which contains features such as:
-- **Age** of the house
-- **Number of hot rooms** in the house
-- **Rainfall** in the area
-- **Proximity to airport**
-- **Proximity to water bodies**
-- **Proximity to bus terminals**
+## Introduction
+House selling predictions are critical for real estate businesses to understand market trends and improve decision-making. This project uses machine learning techniques to predict sales status (`Sold`) using a dataset of housing features.
 
-## Steps Involved
+---
 
-1. **Reading and Understanding the Data:**
-   - Importing necessary libraries
-   - Loading the dataset
-   - Initial data inspection and cleaning
+## Dataset Description
+The dataset contains 18 features describing properties and their surroundings:
+- **Numerical Features**: `price`, `room_num`, `age`, `n_hos_beds`, `n_hot_rooms`, etc.
+- **Categorical Features**: `waterbody`, `bus_ter`, `airport`.
+- **Target Variable**: `Sold` - whether the house was sold (`1`=Yes, `0`=No).
 
-2. **Exploratory Data Analysis (EDA):**
-   - Univariate and bivariate analysis
-   - Outlier detection and treatment
-   - Visualizing relationships between features and target variable
+---
 
-3. **Data Preprocessing:**
-   - Handling missing values
-   - Feature engineering and transformation
-   - Encoding categorical variables
+## Key Steps
 
-4. **Model Building:**
-   - Splitting the data into training and testing sets
-   - Building and evaluating various models (Linear Regression, LDA, KNN)
-   - Tuning model hyperparameters
+### 1. Data Importing and Preprocessing
+- Loaded data using `pandas`.
+- Handled missing values and inconsistent data entries.
+- Scaled numerical variables and encoded categorical variables.
 
-5. **Model Evaluation:**
-   - Testing the models on the test dataset
-   - Comparing predicted values with actual house prices
-   - Evaluating model performance using metrics such as accuracy and confusion matrix
+### 2. Exploratory Data Analysis (EDA)
+- Identified skewness and outliers in features such as `n_hot_rooms` and `rainfall`.
+- Visualized categorical variables to analyze their impact on the target variable.
+- Observations included:
+  1. Missing values in `n_hos_beds`.
+  2. Skewness in `age` and `n_hot_rooms`.
+  3. Uniform values in `bus_ter`.
+
+### 3. Outlier Detection and Treatment
+- Used statistical methods and visualization tools (e.g., boxplots) for outlier detection.
+- Applied transformations and imputation to handle outliers.
+
+### 4. Model Building
+- Built machine learning models to predict `Sold` using algorithms like:
+  - Logistic Regression
+  - Random Forest
+  - Gradient Boosting
+
+---
+
+## Models Used
+- **Logistic Regression**: For baseline binary classification.
+- **Random Forest**: To capture non-linear relationships and interactions.
+- **Gradient Boosting**: For improved accuracy with ensemble methods.
+
+---
+
+## Results and Insights
+- **Feature Importance**: Identified key factors influencing sales, such as proximity to amenities and property age.
+- **Model Performance**: Achieved high accuracy with ensemble models.
+- **Actionable Insights**: Recommendations for real estate stakeholders to improve property marketing.
+
+---
+
+
+
+
