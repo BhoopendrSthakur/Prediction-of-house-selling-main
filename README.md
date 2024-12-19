@@ -50,16 +50,12 @@ The dataset contains 18 features describing properties and their surroundings:
 ### 4. Model Building
 - Built machine learning models to predict `Sold` using algorithms like:
   - Logistic Regression
-  - Random Forest
-  - Gradient Boosting
-
+  - K Neartest Neighbor
 ---
 
 ## Models Used
 - **Logistic Regression**: For baseline binary classification.
-- **Random Forest**: To capture non-linear relationships and interactions.
-- **Gradient Boosting**: For improved accuracy with ensemble methods.
-
+- **K Neartest Neighbor**
 ---
 
 ## Results and Insights
