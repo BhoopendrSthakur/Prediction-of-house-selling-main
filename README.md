@@ -1,4 +1,4 @@
-# House Selling Price Prediction Using Multivariate Linear Regression
+# House Selling Price Prediction Using Logistic Regression
 
 ## Project Overview
 
